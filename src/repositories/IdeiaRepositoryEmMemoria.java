@@ -1,0 +1,89 @@
+package repositories;
+
+import model.Ideia;
+import model.Prioridade;
+import model.Status;
+import model.TipoIdeia;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class IdeiaRepositoryEmMemoria implements IdeiaRepository{
+
+    private List<Ideia> bdIdeias = new ArrayList<>();
+
+    public int getIndex(int id){
+
+        for (Ideia i : bdIdeias){
+            if (existsById(id)){
+                return bdIdeias.indexOf(i);
+            }
+        }
+        return -1;
+    }
+
+    @Override
+    public boolean existsById(int id) {
+
+        for (Ideia i : bdIdeias){
+            if (i.getId() == id){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public void save(Ideia ideia) {
+
+        if (existsById(ideia.getId())){
+            bdIdeias.set(getIndex(ideia.getId()), ideia);
+        }else {
+            bdIdeias.add(ideia);
+        }
+    }
+
+    @Override
+    public Ideia findById(int id) {
+
+        for (Ideia i : bdIdeias){
+            if (existsById(id)){
+                return i;
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public void deleteById(int id) {
+        if (existsById(id)){
+            bdIdeias.remove(getIndex(id));
+        }
+    }
+
+    @Override
+    public void deleteAll() {
+        bdIdeias.clear();
+    }
+
+    @Override
+    public List<Ideia> findAll() {
+        return bdIdeias;
+    }
+
+
+    @Override
+    public List<Ideia> findByStatus(Status status) {
+        return List.of();
+    }
+
+    @Override
+    public List<Ideia> findByPrioridade(Prioridade prioridade) {
+        return List.of();
+    }
+
+    @Override
+    public List<Ideia> findByTipoIdeia(TipoIdeia tipoIdeia) {
+        return List.of();
+    }
+}
