@@ -15,7 +15,7 @@ public interface IdeiaRepository {
     void deleteById(int i);
     void deleteAll();
     boolean existsById(int id);
-    List<Ideia> findByStatus(Status status);
-    List<Ideia> findByPrioridade(Prioridade prioridade);
-    List<Ideia> findByTipoIdeia(TipoIdeia tipoIdeia);
+    List<Ideia> findByStatus(String status);
+    List<Ideia> findByPrioridade(String prioridade);
+    List<Ideia> findByTipoIdeia(String tipoIdeia);
 }

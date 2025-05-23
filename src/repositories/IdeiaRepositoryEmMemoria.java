@@ -15,7 +15,7 @@ public class IdeiaRepositoryEmMemoria implements IdeiaRepository{
     public int getIndex(int id){
 
         for (Ideia i : bdIdeias){
-            if (existsById(id)){
+            if (i.getId() == id){
                 return bdIdeias.indexOf(i);
             }
         }
@@ -25,7 +25,7 @@ public class IdeiaRepositoryEmMemoria implements IdeiaRepository{
     @Override
     public boolean existsById(int id) {
 
-        for (Ideia i : bdIdeias){
+        for (Ideia i : this.bdIdeias){
             if (i.getId() == id){
                 return true;
             }
@@ -47,7 +47,7 @@ public class IdeiaRepositoryEmMemoria implements IdeiaRepository{
     public Ideia findById(int id) {
 
         for (Ideia i : bdIdeias){
-            if (existsById(id)){
+            if (i.getId() == id){
                 return i;
             }
         }
@@ -73,17 +73,17 @@ public class IdeiaRepositoryEmMemoria implements IdeiaRepository{
 
 
     @Override
-    public List<Ideia> findByStatus(Status status) {
+    public List<Ideia> findByStatus(String status) {
         return List.of();
     }
 
     @Override
-    public List<Ideia> findByPrioridade(Prioridade prioridade) {
+    public List<Ideia> findByPrioridade(String prioridade) {
         return List.of();
     }
 
     @Override
-    public List<Ideia> findByTipoIdeia(TipoIdeia tipoIdeia) {
+    public List<Ideia> findByTipoIdeia(String tipoIdeia) {
         return List.of();
     }
 }
