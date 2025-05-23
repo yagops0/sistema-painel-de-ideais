@@ -74,7 +74,15 @@ public class IdeiaRepositoryEmMemoria implements IdeiaRepository{
 
     @Override
     public List<Ideia> findByStatus(String status) {
-        return List.of();
+        List<Ideia> ideiasStatus = new ArrayList<>();
+
+        for (Ideia i : bdIdeias){
+            if (status.equalsIgnoreCase(i.getStatus().toString())){
+                ideiasStatus.add(i);
+            }
+        }
+
+        return ideiasStatus;
     }
 
     @Override

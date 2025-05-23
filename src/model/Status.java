@@ -4,5 +4,6 @@ public enum Status {
 
     A_INICIAR,
     EM_ANDAMENTO,
-    CONCLUIDA
+    CONCLUIDA,
+
 }
