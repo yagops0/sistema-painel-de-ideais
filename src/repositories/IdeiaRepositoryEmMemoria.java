@@ -87,11 +87,27 @@ public class IdeiaRepositoryEmMemoria implements IdeiaRepository{
 
     @Override
     public List<Ideia> findByPrioridade(String prioridade) {
-        return List.of();
+        List<Ideia> ideiasPrioridade = new ArrayList<>();
+
+        for (Ideia i : bdIdeias){
+            if (prioridade.equalsIgnoreCase(i.getPrioridade().toString())){
+                ideiasPrioridade.add(i);
+            }
+        }
+
+        return ideiasPrioridade;
     }
 
     @Override
     public List<Ideia> findByTipoIdeia(String tipoIdeia) {
-        return List.of();
+        List<Ideia> ideiasTipoIdeia = new ArrayList<>();
+
+        for (Ideia i : bdIdeias){
+            if (tipoIdeia.equalsIgnoreCase(i.getTipoIdeia().toString())){
+                ideiasTipoIdeia.add(i);
+            }
+        }
+
+        return ideiasTipoIdeia;
     }
 }

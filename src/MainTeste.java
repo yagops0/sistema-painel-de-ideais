@@ -8,7 +8,7 @@ public class MainTeste {
         /*IdeiaTecnica it1 = new IdeiaTecnica(1, "Java", "testando tal coisa", Status.A_INICIAR,"Tecnologia", "Java 21", "Java 21");
         irem.save(it1);*/
 
-        IdeiaTecnica it1 = new IdeiaTecnica(1, "Estudar Java", "Estudar o Java 21", Status.A_INICIAR, "Programação", "Etsudarea ", "Java");
+        IdeiaTecnica it1 = new IdeiaTecnica(1, "Estudar Java", "Estudar o Java 21", Status.A_INICIAR, Prioridade.ALTA,"Programação", "Etsudarea ", "Java");
         irem.save(it1);
 
         System.out.println("==============================");
@@ -16,14 +16,17 @@ public class MainTeste {
         /*IdeiaEmpreendedora iemp1 = new IdeiaEmpreendedora(2, "Bitcoin", "Investir no mercado de bitcoin", Status.A_INICIAR, "Criptomoedas", 1000.0);
         irem.save(iemp1);*/
 
-        IdeiaEmpreendedora iemp1 = new IdeiaEmpreendedora(2, "Bitcoin", "Investir em bitcoin", Status.CONCLUIDA, "Criptomoeda", 1000.0);
+        IdeiaEmpreendedora iemp1 = new IdeiaEmpreendedora(2, "Bitcoin", "Investir em bitcoin", Status.CONCLUIDA, Prioridade.BAIXA, "Criptomoeda", 1000.0);
         irem.save(iemp1);
 
         /*IdeiaOutro io1 = new IdeiaOutro(3, "Outro", "outroa ideia", Status.CONCLUIDA, "testando outra ideia");
         irem.save(io1);*/
 
-        IdeiaOutro io1 = new IdeiaOutro(3, "otra", "Outra ideia", Status.A_INICIAR, "teste");
+        IdeiaOutro io1 = new IdeiaOutro(3, "otra", "Outra ideia", Status.A_INICIAR, Prioridade.ALTA,"teste");
         irem.save(io1);
+
+        IdeiaOutro io2 = new IdeiaOutro(4, "otra 2", "Outra ideia 2", Status.A_INICIAR, Prioridade.BAIXA,"teste2");
+        irem.save(io2);
 
 
         System .out.println(irem.getIndex(iemp1.getId()));
@@ -75,6 +78,34 @@ public class MainTeste {
             System.out.println("= desc: " + i.getDescricao());
             System.out.println("= status: " + i.getStatus());
 
+        }
+
+        System.out.println("==============================");
+
+        System.out.println("= TESTANDO A FUNÇÃO findByPrioridade");
+
+        System.out.println("==============================");
+
+        for (Ideia i : irem.findByPrioridade(Prioridade.IRRELEVANTE.toString())){
+            System.out.println("= ID: " + i.getId());
+            System.out.println("= Title: " + i.getTitulo());
+            System.out.println("= Prioridade: " + i.getPrioridade());
+            System.out.println("= desc: " + i.getDescricao());
+            System.out.println("= status: " + i.getStatus());
+        }
+
+        System.out.println("==============================");
+
+        System.out.println("= TESTANDO A FUNÇÃO findByTipoIdeia");
+
+        System.out.println("==============================");
+
+        for (Ideia i : irem.findByTipoIdeia(TipoIdeia.TECNICA.toString())){
+            System.out.println("= ID: " + i.getId());
+            System.out.println("= TIPO DE IDEIA: " + i.getTipoIdeia());
+            System.out.println("= Title: " + i.getTitulo());
+            System.out.println("= desc: " + i.getDescricao());
+            System.out.println("= status: " + i.getStatus());
         }
     }
 }
