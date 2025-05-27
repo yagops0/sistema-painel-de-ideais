@@ -9,26 +9,26 @@ public class IdeiaOutro extends Ideia{
     public IdeiaOutro() {
     }
 
-    public IdeiaOutro(String titulo, String descricao, String especificidade) {
-        super(titulo, descricao);
+    public IdeiaOutro(int id, String titulo, String descricao, String especificidade) {
+        super(id,titulo, descricao);
         this.setTipoIdeia(TipoIdeia.OUTRO);
         this.especificidade = especificidade;
     }
 
-    public IdeiaOutro(String titulo, String descricao, List<String> anotacoes, String especificidade) {
-        super(titulo, descricao, anotacoes);
+    public IdeiaOutro(int id, String titulo, String descricao, List<String> anotacoes, String especificidade) {
+        super(id, titulo, descricao, anotacoes);
         this.setTipoIdeia(TipoIdeia.OUTRO);
         this.especificidade = especificidade;
     }
 
-    public IdeiaOutro(String titulo, String descricao, Status status, String especificidade) {
-        super(titulo, descricao, status);
+    public IdeiaOutro(int id, String titulo, String descricao, Status status, String especificidade) {
+        super(id, titulo, descricao, status);
         this.setTipoIdeia(TipoIdeia.OUTRO);
         this.especificidade = especificidade;
     }
 
-    public IdeiaOutro(String titulo, String descricao, Status status, List<String> anotacoes, String especificidade) {
-        super(titulo, descricao, status, anotacoes);
+    public IdeiaOutro(int id, String titulo, String descricao, Status status, List<String> anotacoes, String especificidade) {
+        super(id, titulo, descricao, status, anotacoes);
         this.setTipoIdeia(TipoIdeia.OUTRO);
         this.especificidade = especificidade;
     }

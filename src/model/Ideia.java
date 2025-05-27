@@ -7,7 +7,7 @@ import java.util.List;
 public abstract class Ideia {
 
     
-    private static int somarId = 1;// VARIAVEIS ESTÁTICAS PERTENCEM A CLASSE NÃO A CADA INSTÂNCIA, OU SEJA, TODAS AS INSTÂNCIAS COMPARTILHAM A MESMA VARIAVEL
+    ;// VARIAVEIS ESTÁTICAS PERTENCEM A CLASSE NÃO A CADA INSTÂNCIA, OU SEJA, TODAS AS INSTÂNCIAS COMPARTILHAM A MESMA VARIAVEL
     private int id;
     private String titulo;
     private String descricao;
@@ -16,34 +16,31 @@ public abstract class Ideia {
     private List<String> anotacoes;
 
     public Ideia() {
-        this.id = somarId++;
+
     }
 
     // Ideia sem status e anotacoes
-    public Ideia(String titulo, String descricao) {
-        this.id = somarId++;
+    public Ideia(int id, String titulo, String descricao) {
+        this.id = id;
         this.titulo = titulo;
         this.descricao = descricao;
     }
 
     // Ideia sem status mas com anotacoes
-    public Ideia(String titulo, String descricao, List<String> anotacoes) {
-        this(titulo, descricao);
-        this.id = somarId++;
+    public Ideia(int id, String titulo, String descricao, List<String> anotacoes) {
+        this(id, titulo, descricao);
         this.anotacoes = anotacoes;
     }
 
     // Ideia com status sem anotacoes
-    public Ideia(String titulo, String descricao, Status status) {
-        this(titulo, descricao);
-        this.id = somarId++;
+    public Ideia(int id, String titulo, String descricao, Status status) {
+        this(id, titulo, descricao);
         this.status = status;
     }
 
     // Ideia com status e anotacoes
-    public Ideia(String titulo, String descricao, Status status, List<String> anotacoes) {
-        this(titulo, descricao, status);
-        this.id = somarId++;
+    public Ideia(int id, String titulo, String descricao, Status status, List<String> anotacoes) {
+        this(id, titulo, descricao, status);
         this.anotacoes = anotacoes;
     }
 

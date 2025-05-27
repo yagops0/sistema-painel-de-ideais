@@ -10,29 +10,29 @@ public class IdeiaEducacional extends Ideia{
     public IdeiaEducacional() {
     }
 
-    public IdeiaEducacional(String titulo, String descricao, String materiaisDeEstudo, String plataforma) {
-        super(titulo, descricao);
+    public IdeiaEducacional(int id, String titulo, String descricao, String materiaisDeEstudo, String plataforma) {
+        super(id, titulo, descricao);
         this.setTipoIdeia(TipoIdeia.EDUCACIONAL);
         this.materiaisDeEstudo = materiaisDeEstudo;
         this.plataforma = plataforma;
     }
 
-    public IdeiaEducacional(String titulo, String descricao, List<String> anotacoes, String materiaisDeEstudo, String plataforma) {
-        super(titulo, descricao, anotacoes);
+    public IdeiaEducacional(int id, String titulo, String descricao, List<String> anotacoes, String materiaisDeEstudo, String plataforma) {
+        super(id, titulo, descricao, anotacoes);
         this.setTipoIdeia(TipoIdeia.EDUCACIONAL);
         this.materiaisDeEstudo = materiaisDeEstudo;
         this.plataforma = plataforma;
     }
 
-    public IdeiaEducacional(String titulo, String descricao, Status status, String materiaisDeEstudo, String plataforma) {
-        super(titulo, descricao, status);
+    public IdeiaEducacional(int id, String titulo, String descricao, Status status, String materiaisDeEstudo, String plataforma) {
+        super(id, titulo, descricao, status);
         this.setTipoIdeia(TipoIdeia.EDUCACIONAL);
         this.materiaisDeEstudo = materiaisDeEstudo;
         this.plataforma = plataforma;
     }
 
-    public IdeiaEducacional(String titulo, String descricao, Status status, List<String> anotacoes, String materiaisDeEstudo, String plataforma) {
-        super(titulo, descricao, status, anotacoes);
+    public IdeiaEducacional(int id, String titulo, String descricao, Status status, List<String> anotacoes, String materiaisDeEstudo, String plataforma) {
+        super(id, titulo, descricao, status, anotacoes);
         this.setTipoIdeia(TipoIdeia.EDUCACIONAL);
         this.materiaisDeEstudo = materiaisDeEstudo;
         this.plataforma = plataforma;

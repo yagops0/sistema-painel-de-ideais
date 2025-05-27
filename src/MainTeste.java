@@ -5,19 +5,19 @@ public class MainTeste {
     public static void main(String[] args) {
         IdeiaRepositoryEmMemoria irem = new IdeiaRepositoryEmMemoria();
 
-        IdeiaTecnica it1 = new IdeiaTecnica("Estudar java", "Teste", "Desenvolvimento", "Java", "Java");
+        IdeiaTecnica it1 = new IdeiaTecnica(1, "Estudar java", "Teste", "Desenvolvimento", "Java", "Java");
         irem.save(it1);
 
         System.out.println("==============================");
 
-        IdeiaEmpreendedora iemp1 = new IdeiaEmpreendedora("Bitcoin", "Investir em bitcoin", Status.CONCLUIDA, "Criptomoeda", 1000.0);
+        IdeiaEmpreendedora iemp1 = new IdeiaEmpreendedora(2, "Bitcoin", "Investir em bitcoin", Status.CONCLUIDA, "Criptomoeda", 1000.0);
         irem.save(iemp1);
 
 
-        IdeiaOutro io1 = new IdeiaOutro("otra", "Outra ideia", Status.A_INICIAR, "teste");
+        IdeiaOutro io1 = new IdeiaOutro(3, "otra", "Outra ideia", Status.A_INICIAR, "teste");
         irem.save(io1);
 
-        IdeiaOutro io2 = new IdeiaOutro("otra 2", "Outra ideia 2", Status.A_INICIAR, "teste2");
+        IdeiaOutro io2 = new IdeiaOutro(4, "otra 2", "Outra ideia 2", Status.A_INICIAR, "teste2");
         irem.save(io2);
 
 

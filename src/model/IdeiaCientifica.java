@@ -10,29 +10,29 @@ public class IdeiaCientifica extends Ideia{
     public IdeiaCientifica() {
     }
 
-    public IdeiaCientifica(String titulo, String descricao, String campoDeEstudo, boolean seraPublicado) {
-        super(titulo, descricao);
+    public IdeiaCientifica(int id, String titulo, String descricao, String campoDeEstudo, boolean seraPublicado) {
+        super(id, titulo, descricao);
         this.setTipoIdeia(TipoIdeia.CIENTIFICA);
         this.campoDeEstudo = campoDeEstudo;
         this.seraPublicado = seraPublicado;
     }
 
-    public IdeiaCientifica(String titulo, String descricao, List<String> anotacoes, String campoDeEstudo, boolean seraPublicado) {
-        super(titulo, descricao, anotacoes);
+    public IdeiaCientifica(int id, String titulo, String descricao, List<String> anotacoes, String campoDeEstudo, boolean seraPublicado) {
+        super(id, titulo, descricao, anotacoes);
         this.setTipoIdeia(TipoIdeia.CIENTIFICA);
         this.campoDeEstudo = campoDeEstudo;
         this.seraPublicado = seraPublicado;
     }
 
-    public IdeiaCientifica(String titulo, String descricao, Status status, String campoDeEstudo, boolean seraPublicado) {
-        super(titulo, descricao, status);
+    public IdeiaCientifica(int id, String titulo, String descricao, Status status, String campoDeEstudo, boolean seraPublicado) {
+        super(id, titulo, descricao, status);
         this.setTipoIdeia(TipoIdeia.CIENTIFICA);
         this.campoDeEstudo = campoDeEstudo;
         this.seraPublicado = seraPublicado;
     }
 
-    public IdeiaCientifica(String titulo, String descricao, Status status, List<String> anotacoes, String campoDeEstudo, boolean seraPublicado) {
-        super(titulo, descricao, status, anotacoes);
+    public IdeiaCientifica(int id, String titulo, String descricao, Status status, List<String> anotacoes, String campoDeEstudo, boolean seraPublicado) {
+        super(id, titulo, descricao, status, anotacoes);
         this.setTipoIdeia(TipoIdeia.CIENTIFICA);
         this.campoDeEstudo = campoDeEstudo;
         this.seraPublicado = seraPublicado;
