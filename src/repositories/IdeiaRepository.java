@@ -1,7 +1,6 @@
 package repositories;
 
 import model.Ideia;
-import model.Prioridade;
 import model.Status;
 import model.TipoIdeia;
 
@@ -16,6 +15,5 @@ public interface IdeiaRepository {
     void deleteAll();
     boolean existsById(int id);
     List<Ideia> findByStatus(String status);
-    List<Ideia> findByPrioridade(String prioridade);
     List<Ideia> findByTipoIdeia(String tipoIdeia);
 }

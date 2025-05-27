@@ -38,17 +38,5 @@ public class IdeiaEmpreendedora extends Ideia{
         this.valorAproximado = valorAproximado;
     }
 
-    public IdeiaEmpreendedora(int id, String titulo, String descricao, Status status, Prioridade prioridade, String areaEmpreendimento, double valorAproximado) {
-        super(id, titulo, descricao, status, prioridade);
-        this.setTipoIdeia(TipoIdeia.EMPREENDEDORA);
-        this.areaEmpreendimento = areaEmpreendimento;
-        this.valorAproximado = valorAproximado;
-    }
-
-    public IdeiaEmpreendedora(int id, String titulo, String descricao, Status status, Prioridade prioridade, List<String> anotacoes, String areaEmpreendimento, double valorAproximado) {
-        super(id, titulo, descricao, status, prioridade, anotacoes);
-        this.setTipoIdeia(TipoIdeia.EMPREENDEDORA);
-        this.areaEmpreendimento = areaEmpreendimento;
-        this.valorAproximado = valorAproximado;
-    }
+    
 }

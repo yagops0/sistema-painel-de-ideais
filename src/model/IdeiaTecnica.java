@@ -43,19 +43,5 @@ public class IdeiaTecnica extends Ideia{
         this.ferramenta = ferramenta;
     }
 
-    public IdeiaTecnica(int id, String titulo, String descricao, Status status, Prioridade prioridade, String especialidade, String detalhamentoTecnico, String ferramenta) {
-        super(id, titulo, descricao, status, prioridade);
-        this.setTipoIdeia(TipoIdeia.TECNICA);
-        this.especialidade = especialidade;
-        this.detalhamentoTecnico = detalhamentoTecnico;
-        this.ferramenta = ferramenta;
-    }
-
-    public IdeiaTecnica(int id, String titulo, String descricao, Status status, Prioridade prioridade, List<String> anotacoes, String especialidade, String detalhamentoTecnico, String ferramenta) {
-        super(id, titulo, descricao, status, prioridade, anotacoes);
-        this.setTipoIdeia(TipoIdeia.TECNICA);
-        this.especialidade = especialidade;
-        this.detalhamentoTecnico = detalhamentoTecnico;
-        this.ferramenta = ferramenta;
-    }
+    
 }

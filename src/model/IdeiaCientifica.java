@@ -38,20 +38,7 @@ public class IdeiaCientifica extends Ideia{
         this.seraPublicado = seraPublicado;
     }
 
-    public IdeiaCientifica(int id, String titulo, String descricao, Status status, Prioridade prioridade, String campoDeEstudo, boolean seraPublicado) {
-        super(id, titulo, descricao, status, prioridade);
-        this.setTipoIdeia(TipoIdeia.CIENTIFICA);
-        this.campoDeEstudo = campoDeEstudo;
-        this.seraPublicado = seraPublicado;
-    }
-
-    public IdeiaCientifica(int id, String titulo, String descricao, Status status, Prioridade prioridade, List<String> anotacoes, String campoDeEstudo, boolean seraPublicado) {
-        super(id, titulo, descricao, status, prioridade, anotacoes);
-        this.setTipoIdeia(TipoIdeia.CIENTIFICA);
-        this.campoDeEstudo = campoDeEstudo;
-        this.seraPublicado = seraPublicado;
-    }
-
+    
     @Override
     public String toString() {
         return "ID: " + this.getId() + " Title: " + this.getTitulo() + " Desc: " + this.getDescricao() + " Tipo: " + this.getTipoIdeia().toString();

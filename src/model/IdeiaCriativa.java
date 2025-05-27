@@ -33,15 +33,5 @@ public class IdeiaCriativa extends Ideia{
         this.materiais = materiais;
     }
 
-    public IdeiaCriativa(int id, String titulo, String descricao, Status status, Prioridade prioridade, String materiais) {
-        super(id, titulo, descricao, status, prioridade);
-        this.setTipoIdeia(TipoIdeia.CRIATIVA);
-        this.materiais = materiais;
-    }
-
-    public IdeiaCriativa(int id, String titulo, String descricao, Status status, Prioridade prioridade, List<String> anotacoes, String materiais) {
-        super(id, titulo, descricao, status, prioridade, anotacoes);
-        this.setTipoIdeia(TipoIdeia.CRIATIVA);
-        this.materiais = materiais;
-    }
+    
 }

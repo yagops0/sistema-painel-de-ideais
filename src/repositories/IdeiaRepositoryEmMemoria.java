@@ -1,7 +1,6 @@
 package repositories;
 
 import model.Ideia;
-import model.Prioridade;
 import model.Status;
 import model.TipoIdeia;
 
@@ -85,18 +84,6 @@ public class IdeiaRepositoryEmMemoria implements IdeiaRepository{
         return ideiasStatus;
     }
 
-    @Override
-    public List<Ideia> findByPrioridade(String prioridade) {
-        List<Ideia> ideiasPrioridade = new ArrayList<>();
-
-        for (Ideia i : bdIdeias){
-            if (prioridade.equalsIgnoreCase(i.getPrioridade().toString())){
-                ideiasPrioridade.add(i);
-            }
-        }
-
-        return ideiasPrioridade;
-    }
 
     @Override
     public List<Ideia> findByTipoIdeia(String tipoIdeia) {

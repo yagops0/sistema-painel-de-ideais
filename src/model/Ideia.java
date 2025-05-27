@@ -4,54 +4,42 @@ import java.util.List;
 
 public abstract class Ideia {
 
-    private int id;
+    private int id = 0;
     private String titulo;
     private String descricao;
     private TipoIdeia tipoIdeia;
     private Status status;
-    private Prioridade prioridade;
     private List<String> anotacoes;
 
     public Ideia() {
     }
 
-    // Ideia sem status/prioridade e anotacoes
+    // Ideia sem status e anotacoes
     public Ideia(int id, String titulo, String descricao) {
-        this.id = id;
+        this.id = id++;
         this.titulo = titulo;
         this.descricao = descricao;
     }
 
-    // Ideia sem status/prioridade mas com anotacoes
+    // Ideia sem status mas com anotacoes
     public Ideia(int id, String titulo, String descricao, List<String> anotacoes) {
         this(id, titulo, descricao);
         this.anotacoes = anotacoes;
     }
 
-    // Ideia com status sem prioridade e sem anotacoes
+    // Ideia com status sem anotacoes
     public Ideia(int id, String titulo, String descricao, Status status) {
         this(id, titulo, descricao);
         this.status = status;
     }
 
-    // Ideia com status sem prioridade mas com anotacoes
+    // Ideia com status e anotacoes
     public Ideia(int id, String titulo, String descricao, Status status, List<String> anotacoes) {
         this(id, titulo, descricao, status);
         this.anotacoes = anotacoes;
     }
 
-    // Ideia com status/prioridade sem anotacoes
-    public Ideia(int id, String titulo, String descricao, Status status, Prioridade prioridade) {
-        this(id, titulo, descricao, status);
-        this.prioridade = prioridade;
-    }
-
-    // Ideia com status/prioridade com anotacoes
-    public Ideia(int id, String titulo, String descricao, Status status, Prioridade prioridade, List<String> anotacoes) {
-        this(id, titulo, descricao, status, prioridade);
-        this.anotacoes = anotacoes;
-    }
-
+    
     public int getId() {
         return id;
     }
@@ -88,14 +76,6 @@ public abstract class Ideia {
         this.status = status;
     }
 
-    public Prioridade getPrioridade() {
-        return prioridade;
-    }
-
-    public void setPrioridade(Prioridade prioridade) {
-        this.prioridade = prioridade;
-    }
-
     public List<String> getAnotacoes() {
         return anotacoes;
     }
@@ -103,4 +83,12 @@ public abstract class Ideia {
     public void setAnotacoes(List<String> anotacoes) {
         this.anotacoes = anotacoes;
     }
+
+    
+
+
+    
+
+    
+ 
 }

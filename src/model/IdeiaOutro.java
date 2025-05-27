@@ -33,15 +33,5 @@ public class IdeiaOutro extends Ideia{
         this.especificidade = especificidade;
     }
 
-    public IdeiaOutro(int id, String titulo, String descricao, Status status, Prioridade prioridade, String especificidade) {
-        super(id, titulo, descricao, status, prioridade);
-        this.setTipoIdeia(TipoIdeia.OUTRO);
-        this.especificidade = especificidade;
-    }
-
-    public IdeiaOutro(int id, String titulo, String descricao, Status status, Prioridade prioridade, List<String> anotacoes, String especificidade) {
-        super(id, titulo, descricao, status, prioridade, anotacoes);
-        this.setTipoIdeia(TipoIdeia.OUTRO);
-        this.especificidade = especificidade;
-    }
+    
 }
