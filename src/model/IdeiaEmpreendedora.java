@@ -10,29 +10,29 @@ public class IdeiaEmpreendedora extends Ideia{
     public IdeiaEmpreendedora() {
     }
 
-    public IdeiaEmpreendedora(int id, String titulo, String descricao, String areaEmpreendimento, double valorAproximado) {
-        super(id, titulo, descricao);
+    public IdeiaEmpreendedora(String titulo, String descricao, String areaEmpreendimento, double valorAproximado) {
+        super(titulo, descricao);
         this.setTipoIdeia(TipoIdeia.EMPREENDEDORA);
         this.areaEmpreendimento = areaEmpreendimento;
         this.valorAproximado = valorAproximado;
     }
 
-    public IdeiaEmpreendedora(int id, String titulo, String descricao, List<String> anotacoes, String areaEmpreendimento, double valorAproximado) {
-        super(id, titulo, descricao, anotacoes);
+    public IdeiaEmpreendedora(String titulo, String descricao, List<String> anotacoes, String areaEmpreendimento, double valorAproximado) {
+        super(titulo, descricao, anotacoes);
         this.setTipoIdeia(TipoIdeia.EMPREENDEDORA);
         this.areaEmpreendimento = areaEmpreendimento;
         this.valorAproximado = valorAproximado;
     }
 
-    public IdeiaEmpreendedora(int id, String titulo, String descricao, Status status, String areaEmpreendimento, double valorAproximado) {
-        super(id, titulo, descricao, status);
+    public IdeiaEmpreendedora(String titulo, String descricao, Status status, String areaEmpreendimento, double valorAproximado) {
+        super(titulo, descricao, status);
         this.setTipoIdeia(TipoIdeia.EMPREENDEDORA);
         this.areaEmpreendimento = areaEmpreendimento;
         this.valorAproximado = valorAproximado;
     }
 
-    public IdeiaEmpreendedora(int id, String titulo, String descricao, Status status, List<String> anotacoes, String areaEmpreendimento, double valorAproximado) {
-        super(id, titulo, descricao, status, anotacoes);
+    public IdeiaEmpreendedora(String titulo, String descricao, Status status, List<String> anotacoes, String areaEmpreendimento, double valorAproximado) {
+        super(titulo, descricao, status, anotacoes);
         this.setTipoIdeia(TipoIdeia.EMPREENDEDORA);
         this.areaEmpreendimento = areaEmpreendimento;
         this.valorAproximado = valorAproximado;

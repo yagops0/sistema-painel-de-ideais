@@ -2,9 +2,13 @@ package model;
 
 import java.util.List;
 
+
+
 public abstract class Ideia {
 
-    private int id = 0;
+    
+    private static int somarId = 1;// VARIAVEIS ESTÁTICAS PERTENCEM A CLASSE NÃO A CADA INSTÂNCIA, OU SEJA, TODAS AS INSTÂNCIAS COMPARTILHAM A MESMA VARIAVEL
+    private int id;
     private String titulo;
     private String descricao;
     private TipoIdeia tipoIdeia;
@@ -12,30 +16,34 @@ public abstract class Ideia {
     private List<String> anotacoes;
 
     public Ideia() {
+        this.id = somarId++;
     }
 
     // Ideia sem status e anotacoes
-    public Ideia(int id, String titulo, String descricao) {
-        this.id = id++;
+    public Ideia(String titulo, String descricao) {
+        this.id = somarId++;
         this.titulo = titulo;
         this.descricao = descricao;
     }
 
     // Ideia sem status mas com anotacoes
-    public Ideia(int id, String titulo, String descricao, List<String> anotacoes) {
-        this(id, titulo, descricao);
+    public Ideia(String titulo, String descricao, List<String> anotacoes) {
+        this(titulo, descricao);
+        this.id = somarId++;
         this.anotacoes = anotacoes;
     }
 
     // Ideia com status sem anotacoes
-    public Ideia(int id, String titulo, String descricao, Status status) {
-        this(id, titulo, descricao);
+    public Ideia(String titulo, String descricao, Status status) {
+        this(titulo, descricao);
+        this.id = somarId++;
         this.status = status;
     }
 
     // Ideia com status e anotacoes
-    public Ideia(int id, String titulo, String descricao, Status status, List<String> anotacoes) {
-        this(id, titulo, descricao, status);
+    public Ideia(String titulo, String descricao, Status status, List<String> anotacoes) {
+        this(titulo, descricao, status);
+        this.id = somarId++;
         this.anotacoes = anotacoes;
     }
 
