@@ -1,8 +1,6 @@
 package repositories;
 
 import model.Ideia;
-import model.Status;
-import model.TipoIdeia;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +9,7 @@ public class IdeiaRepositoryEmMemoria implements IdeiaRepository{
 
     private List<Ideia> bdIdeias = new ArrayList<>();
 
-    public int getIndex(int id){
+    private int getIndex(int id){
 
         for (Ideia i : bdIdeias){
             if (i.getId() == id){
@@ -21,8 +19,7 @@ public class IdeiaRepositoryEmMemoria implements IdeiaRepository{
         return -1;
     }
 
-    @Override
-    public boolean existsById(int id) {
+    private boolean existsById(int id) {
 
         for (Ideia i : this.bdIdeias){
             if (i.getId() == id){

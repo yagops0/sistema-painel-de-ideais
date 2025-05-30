@@ -1,6 +1,7 @@
 import model.*;
 import repositories.IdeiaRepositoryEmMemoria;
 
+
 public class MainTeste {
     public static void main(String[] args) {
         IdeiaRepositoryEmMemoria irem = new IdeiaRepositoryEmMemoria();
@@ -21,7 +22,7 @@ public class MainTeste {
         irem.save(io2);
 
 
-        System .out.println(irem.getIndex(iemp1.getId()));
+        //System .out.println(irem.getIndex(iemp1.getId()));
 
         for (Ideia i : irem.findAll()){
             System.out.println(i.toString());
@@ -80,7 +81,7 @@ public class MainTeste {
 
         System.out.println("==============================");
 
-        for (Ideia i : irem.findByTipoIdeia(TipoIdeia.TECNICA.toString())){
+        for (Ideia i : irem.findByTipoIdeia(TipoIdeia.OUTRO.toString())){
             System.out.println("= ID: " + i.getId());
             System.out.println("= TIPO DE IDEIA: " + i.getTipoIdeia());
             System.out.println("= Title: " + i.getTitulo());
