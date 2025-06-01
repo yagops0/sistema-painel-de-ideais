@@ -9,6 +9,7 @@ public class IdeiaTecnica extends Ideia{
     private String ferramenta;
 
     public IdeiaTecnica() {
+        this.setTipoIdeia(TipoIdeia.TECNICA);
     }
 
     public IdeiaTecnica(int id, String titulo, String descricao, String especialidade, String detalhamentoTecnico, String ferramenta) {
@@ -43,5 +44,27 @@ public class IdeiaTecnica extends Ideia{
         this.ferramenta = ferramenta;
     }
 
-    
+    public String getEspecialidade() {
+        return especialidade;
+    }
+
+    public void setEspecialidade(String especialidade) {
+        this.especialidade = especialidade;
+    }
+
+    public String getDetalhamentoTecnico() {
+        return detalhamentoTecnico;
+    }
+
+    public void setDetalhamentoTecnico(String detalhamentoTecnico) {
+        this.detalhamentoTecnico = detalhamentoTecnico;
+    }
+
+    public String getFerramenta() {
+        return ferramenta;
+    }
+
+    public void setFerramenta(String ferramenta) {
+        this.ferramenta = ferramenta;
+    }
 }

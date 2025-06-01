@@ -8,6 +8,7 @@ public class IdeiaCientifica extends Ideia{
     private boolean seraPublicado;
 
     public IdeiaCientifica() {
+        this.setTipoIdeia(TipoIdeia.CIENTIFICA);
     }
 
     public IdeiaCientifica(int id, String titulo, String descricao, String campoDeEstudo, boolean seraPublicado) {
@@ -38,7 +39,22 @@ public class IdeiaCientifica extends Ideia{
         this.seraPublicado = seraPublicado;
     }
 
-    
+    public String getCampoDeEstudo() {
+        return campoDeEstudo;
+    }
+
+    public void setCampoDeEstudo(String campoDeEstudo) {
+        this.campoDeEstudo = campoDeEstudo;
+    }
+
+    public boolean isSeraPublicado() {
+        return seraPublicado;
+    }
+
+    public void setSeraPublicado(boolean seraPublicado) {
+        this.seraPublicado = seraPublicado;
+    }
+
     @Override
     public String toString() {
         return "ID: " + this.getId() + " Title: " + this.getTitulo() + " Desc: " + this.getDescricao() + " Tipo: " + this.getTipoIdeia().toString();

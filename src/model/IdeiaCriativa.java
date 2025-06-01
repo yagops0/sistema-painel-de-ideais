@@ -7,6 +7,7 @@ public class IdeiaCriativa extends Ideia{
     private String materiais;
 
     public IdeiaCriativa() {
+        this.setTipoIdeia(TipoIdeia.CRIATIVA);
     }
 
     public IdeiaCriativa(int id, String titulo, String descricao, String materiais) {
@@ -33,5 +34,11 @@ public class IdeiaCriativa extends Ideia{
         this.materiais = materiais;
     }
 
-    
+    public String getMateriais() {
+        return materiais;
+    }
+
+    public void setMateriais(String materiais) {
+        this.materiais = materiais;
+    }
 }

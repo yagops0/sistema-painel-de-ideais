@@ -8,6 +8,7 @@ public class IdeiaEmpreendedora extends Ideia{
     private double valorAproximado;
 
     public IdeiaEmpreendedora() {
+        this.setTipoIdeia(TipoIdeia.EMPREENDEDORA);
     }
 
     public IdeiaEmpreendedora(int id, String titulo, String descricao, String areaEmpreendimento, double valorAproximado) {
@@ -38,5 +39,19 @@ public class IdeiaEmpreendedora extends Ideia{
         this.valorAproximado = valorAproximado;
     }
 
-    
+    public String getAreaEmpreendimento() {
+        return areaEmpreendimento;
+    }
+
+    public void setAreaEmpreendimento(String areaEmpreendimento) {
+        this.areaEmpreendimento = areaEmpreendimento;
+    }
+
+    public double getValorAproximado() {
+        return valorAproximado;
+    }
+
+    public void setValorAproximado(double valorAproximado) {
+        this.valorAproximado = valorAproximado;
+    }
 }

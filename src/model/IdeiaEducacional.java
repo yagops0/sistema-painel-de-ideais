@@ -8,6 +8,7 @@ public class IdeiaEducacional extends Ideia{
     private String plataforma;
 
     public IdeiaEducacional() {
+        this.setTipoIdeia(TipoIdeia.EDUCACIONAL);
     }
 
     public IdeiaEducacional(int id, String titulo, String descricao, String materiaisDeEstudo, String plataforma) {
@@ -38,5 +39,19 @@ public class IdeiaEducacional extends Ideia{
         this.plataforma = plataforma;
     }
 
-    
+    public String getMateriaisDeEstudo() {
+        return materiaisDeEstudo;
+    }
+
+    public void setMateriaisDeEstudo(String materiaisDeEstudo) {
+        this.materiaisDeEstudo = materiaisDeEstudo;
+    }
+
+    public String getPlataforma() {
+        return plataforma;
+    }
+
+    public void setPlataforma(String plataforma) {
+        this.plataforma = plataforma;
+    }
 }

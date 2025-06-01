@@ -7,6 +7,7 @@ public class IdeiaOutro extends Ideia{
     private String especificidade;
 
     public IdeiaOutro() {
+        this.setTipoIdeia(TipoIdeia.OUTRO);
     }
 
     public IdeiaOutro(int id, String titulo, String descricao, String especificidade) {
